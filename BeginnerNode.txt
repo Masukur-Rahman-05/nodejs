@@ -1,0 +1,61 @@
+As a beginner to learn Node Js File System
+
+
+Here's the refined list of methods for you to start with:
+
+    fs.readFile(path[, options], callback)
+    fs.writeFile(file, data[, options], callback)
+    fs.appendFile(path, data[, options], callback)
+    fs.access(path[, mode], callback)
+    fs.mkdir(path[, options], callback)
+    fs.readdir(path[, options], callback)
+    fs.createReadStream(path[, options])
+    fs.createWriteStream(path[, options])
+    fs.rename(oldPath, newPath, callback)
+    fs.unlink(path, callback)
+    fs.rmdir(path[, options], callback)
+    fs.rm(path[, options], callback)
+    fs.stat(path[, options], callback)
+    fs.copyFile(src, dest[, mode], callback) (optional)
+    fs.watch(filename[, options][, listener]) (optional)
+
+CallBack API
+
+    Reading and Writing Files:
+        fs.readFile(path[, options], callback): Reading files, such as configuration files or templates.
+        fs.writeFile(file, data[, options], callback): Writing data to files, useful for saving data or logging.
+
+    Appending to Files:
+        fs.appendFile(path, data[, options], callback): Appending data to files, useful for adding logs or updating files incrementally.
+
+    Checking File/Directory Existence:
+        fs.access(path[, mode], callback): Checking if a file or directory exists and verifying permissions.
+
+    Creating and Reading Directories:
+        fs.mkdir(path[, options], callback): Creating directories, useful for managing file uploads or organizing files.
+        fs.readdir(path[, options], callback): Reading the contents of a directory to list files.
+
+    File Streams:
+        fs.createReadStream(path[, options]): Reading large files using streams.
+        fs.createWriteStream(path[, options]): Writing large files using streams.
+
+    Renaming and Deleting Files/Directories:
+        fs.rename(oldPath, newPath, callback): Renaming or moving files.
+        fs.unlink(path, callback): Deleting files.
+        fs.rmdir(path[, options], callback): Removing directories.
+        fs.rm(path[, options], callback): Removing files or directories (introduced in Node.js 12.10.0).
+
+    File Metadata:
+        fs.stat(path[, options], callback): Getting information about a file, such as size and modification date.
+
+Additional Methods to Consider
+
+These methods are useful but might be less frequently used in the initial stages:
+
+    Copying Files:
+        fs.copyFile(src, dest[, mode], callback): Copying files from one location to another.
+
+    Watching for Changes:
+        fs.watch(filename[, options][, listener]): Watching files for changes, useful for implementing live-reload functionality during development.
+
+
